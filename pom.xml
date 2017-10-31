@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>Pottery_Barn_Automation_POM_PF</groupId>
-  <artifactId>Pottery_Barn_Automation_POM_PF</artifactId>
+  <groupId>ecomerce-automation</groupId>
+  <artifactId>ecomerce-automation</artifactId>
   <version>0.1</version>
   <packaging>jar</packaging>
 

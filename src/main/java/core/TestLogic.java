@@ -112,6 +112,13 @@ public class TestLogic {
 //	    System.out.println(Main.validatedText);
 	}
     }
+    
+    public static String validateQuantity(String exp, String actual) {
+	if (exp.equals(actual)) {
+	    return(exp);
+	}
+	return "Quantity > 1";
+    }
 
     public static void validatePresElem(String testCase, WebElement elemName) {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

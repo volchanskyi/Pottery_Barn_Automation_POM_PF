@@ -7,14 +7,14 @@ import org.openqa.selenium.support.FindBy;
 
 public class ObjectStorage {
 
-    @FindBy(linkText = "minimize")
+    @FindBy(xpath = "//*[@id='home']/div[11]/div/div[3]/a")
     static WebElement minimizeOverlay;
 
-    @FindBy(linkText = "Cookware")
-    static WebElement coockwareMenuBtn;
+    @FindBy(linkText = "Lighting")
+    static WebElement LightingMenuBtn;
 
-    @FindBy(linkText = "Tea Kettles")
-    static WebElement teaKettlesSection;
+    @FindBy(linkText = "Ambient Lamps")
+    static WebElement ambLampsSection;
 
     @FindBy(className = "stickyHeaderCloseButton")
     static WebElement stickyHeader;
@@ -25,7 +25,7 @@ public class ObjectStorage {
     @FindBy(xpath = "id('facetedNavHorizontalContainer')/div[1]/div[2]/ul[1]/li[4]/label[1]/a[1]")
     static WebElement priceRangeFourthMenuItem;
 
-    @FindBy(xpath = "//*[@id='subCatListContainer']/ul/li[1]/a[2]")
+    @FindBy(xpath = "id('subCatListContainer')/ul[1]/li[1]/a[1]")
     static WebElement firstItem;
 
     @FindBy(xpath = "//span[contains(text(),'Add to Cart')]")
@@ -42,11 +42,11 @@ public class ObjectStorage {
 
     @FindBy(xpath = "//*[@id='cartForm']/div/div/div[2]/div[1]")
     static WebElement savedNameOfItemTextShoppingCart;
-    
+
     @FindBy(xpath = "id('cartForm')/div[4]/div[1]/div[1]/div[2]/div[1]/a[1]")
     static WebElement savedNameOfItemTextCheckout;
 
-    @FindBy(xpath = "//*[@id='sub-brand-bar-container']/section/div/div/div[1]")
+    @FindBy(xpath = "//*[@id='nav-account-links']/a")
     static WebElement myAccBtn;
 
     @FindBy(xpath = "//a[contains(text(), 'Sign In')]")
@@ -60,12 +60,15 @@ public class ObjectStorage {
 
     @FindBy(id = "btn-sign-in")
     static WebElement logInBtn;
-    
+
     @FindBy(id = "breadcrumb-list")
     static WebElement breadcrumbList;
-    
+
     @FindBy(id = "topnav-container")
     static WebElement mainNavMenu;
+    
+    @FindBy(id = "id('cartForm')/div[1]/div[1]/div[2]/div[3]/div[2]/div[2]")
+    static WebElement quantityShopCart;
 
     // @FindBy(xpath = "/html/head/title")
     // static WebElement title;
@@ -78,7 +81,7 @@ public class ObjectStorage {
     public static String getelemChkList(Object key) {
 	return elemChkList.get(key);
     }
-    
+
     public static String getTestDataKey(Object key) {
 	return testDataList.get(key);
     }
@@ -90,8 +93,8 @@ public class ObjectStorage {
     private static TreeMap<String, String> createElemChkListMap() {
 	TreeMap<String, String> elemChkList = new TreeMap<String, String>();
 	elemChkList.put("minimizeOverlay", "Minimize Button on Overlay? ");
-	elemChkList.put("coockwareMenuBtn", "Coockware menu button? ");
-	elemChkList.put("teaKettlesSection", "Tea kettle menu section? ");
+	elemChkList.put("LightingMenuBtn", "Lighting menu button? ");
+	elemChkList.put("ambLampsSection", "Ambient Lamps menu section? ");
 	elemChkList.put("selectPriceRangeDDmenu", "Price range Drop-Down Menu? ");
 	elemChkList.put("maxPriceRangeMenuItem", "Price range items? ");
 	elemChkList.put("addToCartBtn", "Add to cart button? ");
@@ -113,13 +116,12 @@ public class ObjectStorage {
 	elemChkList.put("firstItem", "First Item from the list(image)? ");
 	return elemChkList;
     }
-    
+
     private static TreeMap<String, String> createTestDataMap() {
 	TreeMap<String, String> testDataList = new TreeMap<String, String>();
 	testDataList.put("testUserEmail", "testusera056@gmail.com");
 	testDataList.put("testUserPassword", "passwordForUser056");
 	return testDataList;
     }
-    
-    
+
 }

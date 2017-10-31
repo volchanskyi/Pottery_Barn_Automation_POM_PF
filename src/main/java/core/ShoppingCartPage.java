@@ -34,12 +34,16 @@ public class ShoppingCartPage {
 	TestLogic.validateVisElem("saveForLaterLink", ObjectStorage.saveForLaterLink);
 	// TestLogic.scrollIntoView(ObjectStorage.breadcrumbList);
 	TestLogic.clickOn(ObjectStorage.saveForLaterLink);
-	System.out.println("Test Case 07: PASSED (Save for later)");
+	
 	TestLogic.scrollIntoView(ObjectStorage.mainNavMenu);
 	TestLogic.validateVisElem("savedNumberOfItemText", ObjectStorage.savedNumberOfItemText);
 	TestLogic.validateVisElem("savedNameOfItemTextShoppingCart", ObjectStorage.savedNameOfItemTextShoppingCart);
 	TestLogic.validateText(Main.validatedText, TestLogic.getText(ObjectStorage.savedNameOfItemTextShoppingCart));
-	System.out.println("Test Case 08: PASSED (Item " + TestLogic.getText(ObjectStorage.savedNameOfItemTextShoppingCart) + " (1) exists in the saved items list)");
+	TestLogic.validateQuantity("1", TestLogic.getText(ObjectStorage.quantityShopCart));
+	System.out.println(
+		"Test Case 06: PASSED (Item " + TestLogic.getText(ObjectStorage.savedNameOfItemTextShoppingCart)
+			+ TestLogic.validateQuantity("1", TestLogic.getText(ObjectStorage.quantityShopCart))
+			+ " exists in the saved items list)");
 	TestLogic.returnUrl();
 	TestLogic.quit();
     }

@@ -13,7 +13,7 @@ public class Main {
 	System.out.println("Browser: Chrome");
 	start = System.currentTimeMillis();
 //	SignInPage.validate(driver, "https://www.williams-sonoma.com");
-	HomePage.validate(driver, "https://www.williams-sonoma.com");
+	HomePage.validate(driver, "https://www.potterybarn.com");
 	ItemListPage.validate(driver, url);
 	PDP.validate(driver, url);
 	ShoppingCartPage.validate(driver, url);

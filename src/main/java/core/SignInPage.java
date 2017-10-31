@@ -8,8 +8,8 @@ public class SignInPage {
 	TestLogic.validatePresElem("minimizeOverlay", ObjectStorage.minimizeOverlay);
 	TestLogic.clickOn(ObjectStorage.minimizeOverlay);
 	
-	TestLogic.validateVisElem("stickyHeader", ObjectStorage.stickyHeader);
-	TestLogic.clickOn(ObjectStorage.stickyHeader);
+//	TestLogic.validateVisElem("stickyHeader", ObjectStorage.stickyHeader);
+//	TestLogic.clickOn(ObjectStorage.stickyHeader);
 	
 	TestLogic.validateVisElem("myAccBtn", ObjectStorage.myAccBtn);
 	TestLogic.clickOn(ObjectStorage.myAccBtn);
