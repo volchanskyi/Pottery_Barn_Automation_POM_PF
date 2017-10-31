@@ -9,6 +9,7 @@ public class ItemListPage {
 	//PRE-CONDITIONS
 		TestLogic.open(url);
 		TestLogic.returnUrl();
+		
 		SignInPage.validate();
 		//TC STARTS HERE
 

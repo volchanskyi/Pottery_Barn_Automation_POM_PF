@@ -13,7 +13,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class TestLogic {
 
@@ -93,31 +92,33 @@ public class TestLogic {
 
     public static String getText(WebElement elemName) {
 	if (!elemName.getText().isEmpty()) {
-//	    System.out.println("Item has the next name: " + elemName.getText());
+	    // System.out.println("Item has the next name: " +
+	    // elemName.getText());
 	} else {
 	    System.out.println("element is empty!");
 	}
 	return elemName.getText();
     }
-    
+
     public static void updateValidatedText(WebElement elemName) {
 	Main.validatedText = getText(elemName);
     }
 
     public static void validateText(String exp, String actual) {
 	if (exp.equals(actual)) {
-	    System.out.println("The item saved in the shopping cart mathes the item from the saved for later list (" + actual + ")");
+	    System.out.println("The item saved in the shopping cart mathes the item from the saved for later list ("
+		    + actual + ")");
 	} else {
 	    System.out.println("Error");
-//	    System.out.println(Main.validatedText);
+	    // System.out.println(Main.validatedText);
 	}
     }
-    
+
     public static String validateQuantity(String exp, String actual) {
 	if (exp.equals(actual)) {
-	    return(exp);
+	    return "(" + exp + " )";
 	}
-	return "Quantity > 1";
+	return "(Quantity saved " + "(" + actual + ") )";
     }
 
     public static void validatePresElem(String testCase, WebElement elemName) {
@@ -127,8 +128,13 @@ public class TestLogic {
 
     public static void validateVisElem(String testCase, WebElement elemName) {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-	System.out
-		.println(ObjectStorage.getelemChkList(testCase) + (isVisiblePF(elemName) ? "Visible" : "Not visible"));
+	try {
+	    elemName.isDisplayed();
+	    System.out.println(
+		    ObjectStorage.getelemChkList(testCase) + (isVisiblePF(elemName) ? "Visible" : "Not visible"));
+	} catch (NoSuchElementException e) {
+	    return;
+	}
     }
 
     public static void clickOn(WebElement elemName) {
@@ -136,6 +142,7 @@ public class TestLogic {
 	try {
 	    elemName.isDisplayed();
 	    elemName.click();
+
 	} catch (NoSuchElementException e) {
 	    return;
 	}

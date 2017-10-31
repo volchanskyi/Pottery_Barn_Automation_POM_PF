@@ -9,6 +9,7 @@ public class HomePage {
 	//PRE-CONDITIONS
 	TestLogic.open(url);
 	TestLogic.returnUrl();
+
 	SignInPage.validate();
 	//TC STARTS HERE
 	System.out.println("Test Case 01: PASSED (Overlay 'Sign Up and Safe' is closed");

@@ -44,6 +44,8 @@ public class ShoppingCartPage {
 		"Test Case 06: PASSED (Item " + TestLogic.getText(ObjectStorage.savedNameOfItemTextShoppingCart)
 			+ TestLogic.validateQuantity("1", TestLogic.getText(ObjectStorage.quantityShopCart))
 			+ " exists in the saved items list)");
+	
+	TestLogic.clickOn(ObjectStorage.signOutLnk);
 	TestLogic.returnUrl();
 	TestLogic.quit();
     }

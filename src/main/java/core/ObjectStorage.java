@@ -1,15 +1,23 @@
 package core;
 
+import java.util.List;
 import java.util.TreeMap;
 
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 
 public class ObjectStorage {
 
-    @FindBy(xpath = "//*[@id='home']/div[11]/div/div[3]/a")
-    static WebElement minimizeOverlay;
-
+    @FindBy(id = "emailAddr")
+    static WebElement emailAddr;
+    
+    @FindBy(id = "joinNow")
+    static WebElement joinNow;
+    
+    @FindBy(linkText = "close")
+    static WebElement cancelEmailForm;
+    
     @FindBy(linkText = "Lighting")
     static WebElement LightingMenuBtn;
 
@@ -43,11 +51,12 @@ public class ObjectStorage {
     @FindBy(xpath = "//*[@id='cartForm']/div/div/div[2]/div[1]")
     static WebElement savedNameOfItemTextShoppingCart;
 
-    @FindBy(xpath = "id('cartForm')/div[4]/div[1]/div[1]/div[2]/div[1]/a[1]")
+    @FindBy(xpath = "//*[@id='cartForm']/div[5]/div/div/div[2]/div[1]/a")
     static WebElement savedNameOfItemTextCheckout;
 
     @FindBy(xpath = "//*[@id='nav-account-links']/a")
     static WebElement myAccBtn;
+  //*[@id="nav-account-links"]/a
 
     @FindBy(xpath = "//a[contains(text(), 'Sign In')]")
     static WebElement signInBtn;
@@ -66,9 +75,12 @@ public class ObjectStorage {
 
     @FindBy(id = "topnav-container")
     static WebElement mainNavMenu;
-    
-    @FindBy(id = "id('cartForm')/div[1]/div[1]/div[2]/div[3]/div[2]/div[2]")
+
+    @FindBy(xpath = "//*[@id='cartForm']/div/div/div[2]/div[3]/div[2]/div[2]")
     static WebElement quantityShopCart;
+    
+    @FindBy(linkText = "Sign Out")
+    static WebElement signOutLnk;
 
     // @FindBy(xpath = "/html/head/title")
     // static WebElement title;
